@@ -32,9 +32,12 @@ Configures scaling based on 50% CPU utilization
 
 
 To apply these configurations:
-bashCopykubectl apply -f deployment.yaml
+ kubectl apply -f deployment.yaml
+ 
 kubectl apply -f service.yaml
+
 kubectl apply -f hpa.yaml
+
 To monitor the HPA:
 bashCopykubectl get hpa nginx-hpa --watch
 To test the autoscaling, you can generate load on the pods using a tool like hey or ab (Apache Benchmark). The HPA will:
